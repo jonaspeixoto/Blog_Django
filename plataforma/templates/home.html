@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block 'titulo' %} Meu blog {% endblock 'titulo' %}
+
+{% block 'conteudo' %}
+
+<main>
+    {% for post in posts %}
+    <article>
+      <h2>{{post.titulo}}</h2>
+      <img src="upload\Trabalho_em_equipe.jpg" alt="{{post.imagem_post}}">
+      <p>{{post.resumo}}</p>
+    </article>
+     {% endfor %}
+  </main>
+  
+  <aside>
+    <h2>Sidebar</h2>
+    <ul>
+      <li><a href="#">Categorias</a></li>
+      <li><a href="#">Arquivos</a></li>
+      <li><a href="#">Tags</a></li>
+    </ul>
+  </aside>
+  
+
+
+{% endblock %}
