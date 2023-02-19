@@ -5,12 +5,13 @@
     {% block 'head' %}{% endblock  %}
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="stylesheet" href="{% static 'base/css/estilo.css'  %}"">
+    <link rel="stylesheet" href="{% static 'base/css/estilo.css' %}">
 
     <title>{% block 'titulo' %}{% endblock  %}</title>
   </head>
   <body>
     <header>
+      <!-- <a href="{% url 'blog'%}"><h1>Meu Blog</h1></a> -->
       <h1>Meu Blog</h1>
       <nav>
         <ul>
@@ -20,6 +21,8 @@
         </ul>
       </nav>
     </header>
+
+
  
 
     {% block 'conteudo' %}{% endblock  %}

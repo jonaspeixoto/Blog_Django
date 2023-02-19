@@ -1,0 +1,16 @@
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+article {
+  max-width: 600px;
+  text-align: center; /* adiciona o alinhamento centralizado */
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}

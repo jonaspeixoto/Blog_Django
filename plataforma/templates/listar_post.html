@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block 'titulo' %} Meu blog {% endblock 'titulo' %}
+
+{% block 'head' %}
+  <link rel="stylesheet" href="{% static 'plataforma\css\estilo_posts.css' %}">
+{% endblock  %}
+
+{% block 'conteudo' %}
+
+<main>
+    <article>
+        <h1>{{posts.titulo}}</h1>
+        <img src="{{posts.imagem_post.url}}" alt="aaa">
+        <p>{{posts.conteudo}}</p>
+      </a>
+    </article>
+  </main>
+  
+
+
+{% endblock %}

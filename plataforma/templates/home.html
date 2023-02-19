@@ -1,15 +1,22 @@
 {% extends 'base.html' %}
-
+{% load static %}
 {% block 'titulo' %} Meu blog {% endblock 'titulo' %}
+
+{% block 'head' %}
+  <link rel="stylesheet" href="{% static 'plataforma\css\estilo.css' %}">
+  <link rel="stylesheet" href="{% static 'base/css/estilo.css' %}">
+{% endblock  %}
 
 {% block 'conteudo' %}
 
 <main>
     {% for post in posts %}
     <article>
-      <h2>{{post.titulo}}</h2>
-      <img src="upload\Trabalho_em_equipe.jpg" alt="{{post.imagem_post}}">
-      <p>{{post.resumo}}</p>
+      <a href="{% url 'listar_post' post.id %}">
+        <h2>{{post.titulo}}</h2>
+        <img src="{{post.imagem_post.url}}" alt="aaa">
+        <p>{{post.resumo}}</p>
+      </a>
     </article>
      {% endfor %}
   </main>

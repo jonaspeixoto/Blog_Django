@@ -9,3 +9,11 @@ def blog(request):
     return render(request, 'home.html', context)
 
 
+def listar_post(request, id):
+    posts = Post.objects.get(pk=id)
+    context = {
+        'posts':posts 
+    }
+
+    return render(request, 'listar_post.html', context)
+
