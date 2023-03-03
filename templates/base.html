@@ -18,6 +18,13 @@
           <li><a href="#">Home</a></li>
           <li><a href="#">Sobre</a></li>
           <li><a href="#">Contato</a></li>
+          <li><a href="{% url 'cadastro' %}">Cadastro</a></li>
+          <li><a href="{% url 'login' %}">Login</a></li>
+          {% if user.is_active %}
+            <li><a href="{% url 'criar_post' %}">Criar Post</a></li>
+          {% endif %}
+
+
         </ul>
       </nav>
     </header>

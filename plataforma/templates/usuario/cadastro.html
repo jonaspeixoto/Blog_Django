@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block 'titulo' %} Meu blog {% endblock 'titulo' %}
+
+{% block 'head' %}
+  <link rel="stylesheet" href="{% static 'plataforma\css\estilo.css' %}">
+  <link rel="stylesheet" href="{% static 'base/css/estilo.css' %}">
+{% endblock  %}
+
+
+{% block 'conteudo' %} 
+    <form action="" method="POST">{% csrf_token %}
+        <label>Nome</label>
+        {{form.nome}}
+        <label>Email</label>
+        {{form.email}}
+        <label>Senha</label>
+        {{form.senha}}
+        <input type="submit" name="" id="">
+    </form>
+{% endblock %}

@@ -9,3 +9,8 @@ class Post(models.Model):
 
     def __str__(self):
         return str(self.titulo)
+
+class Usuario(models.Model):
+    nome = models.CharField(max_length=200)
+    email = models.EmailField()
+    senha = models.CharField(max_length=300)

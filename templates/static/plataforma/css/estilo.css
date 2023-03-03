@@ -1,4 +1,101 @@
-a{
-    text-decoration: none;
+/* estilo geral da página */
 
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+/* estilo do artigo */
+
+article {
+  flex-basis: calc(50% - 20px);
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  padding: 10px;
+  transition: all 0.3s ease;
+}
+
+article a {
+  text-decoration: none;
+  color: #333;
+}
+
+article h2 {
+  font-size: 24px;
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+article img {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+article p {
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+/* estilo de hover */
+
+article:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transform: translateY(-5px);
+}
+
+/* estilo da barra lateral */
+
+aside {
+  flex-basis: 25%;
+  margin-left: 20px;
+}
+
+aside h2 {
+  font-size: 20px;
+  margin-top: 0;
+}
+
+aside ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+aside li {
+  margin-bottom: 10px;
+}
+
+aside a {
+  text-decoration: none;
+}
+
+/* estilo responsivo */
+
+@media screen and (max-width: 768px) {
+  main {
+    flex-wrap: wrap;
+    justify-content: center;
   }
+  
+  article {
+    flex-basis: calc(50% - 20px);
+  }
+  
+  aside {
+    flex-basis: 100%;
+    margin-left: 0;
+  }
+}

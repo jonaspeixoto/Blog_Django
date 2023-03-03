@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block 'titulo' %} Meu blog {% endblock 'titulo' %}
+
+{% block 'head' %}
+  <link rel="stylesheet" href="{% static 'plataforma\css\estilo.css' %}">
+  <link rel="stylesheet" href="{% static 'base/css/estilo.css' %}">
+{% endblock  %}
+
+{% block 'conteudo' %}
+
+<main>
+    <div>
+        <h1>Criação de Posts</h1>
+    </div>
+    <form action="{% url 'criar_post' %}" method="POST" enctype="multipart/form-data"> {% csrf_token %}
+    <div>
+        <label>Titulo: </label>
+        {{form.titulo}}
+    </div>
+    <div>
+        <label>Imagen: </label>
+        {{form.imagem_post}}
+    </div>
+    <div>
+        <label>resumo: </label>
+        {{form.resumo}}
+    </div>
+    <div>
+        <label>Conteudo: </label>
+        {{form.conteudo}}
+    </div>
+
+    <input type="submit"> Salvar
+    </form>
+</main>
+  
+
+{% endblock %}
